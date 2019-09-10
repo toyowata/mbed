@@ -354,7 +354,7 @@
     "LPC11U35_401": {
         "inherits": ["LPCTarget"],
         "core": "Cortex-M0",
-        "default_toolchain": "uARM",
+        "default_toolchain": "ARM",
         "extra_labels": ["NXP", "LPC11UXX"],
         "macros": [
             "CMSIS_VECTAB_VIRTUAL",
@@ -373,7 +373,8 @@
             "SERIAL",
             "SLEEP",
             "SPI",
-            "SPISLAVE"
+            "SPISLAVE",
+            "USTICKER"
         ],
         "default_lib": "small",
         "release_versions": ["2"],
