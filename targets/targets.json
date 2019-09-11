@@ -373,8 +373,7 @@
             "SERIAL",
             "SLEEP",
             "SPI",
-            "SPISLAVE",
-            "USTICKER"
+            "SPISLAVE"
         ],
         "default_lib": "small",
         "release_versions": ["2"],
