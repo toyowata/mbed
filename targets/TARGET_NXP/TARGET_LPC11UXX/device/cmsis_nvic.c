@@ -60,8 +60,8 @@ void NVIC_SetVector(IRQn_Type IRQn, uint32_t vector) {
     
     // Copy and switch to dynamic vectors if first time called
     if((LPC_SYSCON->SYSMEMREMAP & 0x3) != 0x1) {     
-      uint32_t *old_vectors = (uint32_t *)0;         // FLASH vectors are at 0x0
-      for(i = 0; i < NVIC_NUM_VECTORS; i++) {    
+        volatile uint32_t *old_vectors = (uint32_t *)0;         // FLASH vectors are at 0x0
+        for(i = 0; i < NVIC_NUM_VECTORS; i++) {    
             vectors[i] = old_vectors[i];
         }
         LPC_SYSCON->SYSMEMREMAP = 0x1; // Remaps 0x0-0x1FF FLASH block to RAM block
