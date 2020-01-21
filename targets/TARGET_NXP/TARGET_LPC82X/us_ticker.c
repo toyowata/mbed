@@ -17,6 +17,8 @@
 #include "us_ticker_api.h"
 #include "PeripheralNames.h"
 
+#if DEVICE_USTICKER
+
 static int us_ticker_inited = 0;
 int MRT_Clock_MHz;
 unsigned int ticker_fullcount_us;
@@ -114,3 +116,5 @@ void us_ticker_free(void)
 {
 
 }
+
+#endif
